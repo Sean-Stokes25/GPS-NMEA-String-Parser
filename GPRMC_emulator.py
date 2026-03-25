@@ -30,6 +30,7 @@ def random_gprmc_time():
     # Format into GPRMC hhmmss.sss
     return t.strftime("%H%M%S") + ".000"
 
+#Code does not output a perfect string (ie mode and status may conflict) but it does the job.
 def GPRMC_emulator():
     talker_id = "$GPRMC"
     UTC_time = (random_gprmc_time())
